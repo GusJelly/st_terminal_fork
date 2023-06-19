@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Perfect DOS VGA 437:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -106,7 +106,7 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 4;
+unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -200,8 +200,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ Mod1Mask|ShiftMask,   XK_K,           zoom,           {.f = +1} },
-	{ Mod1Mask|ShiftMask,   XK_J,           zoom,           {.f = -1} },
+	{ Mod1Mask|ShiftMask,   XK_K,       zoom,           {.f = +1} },
+	{ Mod1Mask|ShiftMask,   XK_J,        zoom,           {.f = -1} },
 	{ Mod1Mask|ShiftMask,   XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
