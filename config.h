@@ -6,8 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=11:antialias=true:autohint=true";
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=16:antialias=true:autohint=true";
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -107,7 +107,7 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
 float alpha = 1.00;
@@ -240,8 +240,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ Mod1Mask|ShiftMask,   XK_K,       zoom,           {.f = +1} },
-	{ Mod1Mask|ShiftMask,   XK_J,        zoom,           {.f = -1} },
+	{ Mod1Mask|ShiftMask,   XK_K,           zoom,           {.f = +1} },
+	{ Mod1Mask|ShiftMask,   XK_J,           zoom,           {.f = -1} },
 	{ Mod1Mask|ShiftMask,   XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
