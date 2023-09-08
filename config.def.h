@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=11:antialias=true:autohint=true";
-static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=13:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*
@@ -78,7 +78,7 @@ static unsigned int cursorthickness = 2;
  * 0: disable (render all U25XX glyphs normally from the font).
  */
 const int boxdraw = 1;
-const int boxdraw_bold = 0;
+const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
 const int boxdraw_braille = 1;
@@ -240,8 +240,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ Mod1Mask|ShiftMask,   XK_K,           zoom,           {.f = +1} },
-	{ Mod1Mask|ShiftMask,   XK_J,           zoom,           {.f = -1} },
+	{ Mod1Mask|ShiftMask,   XK_Page_Up,     zoom,           {.f = +1} },
+	{ Mod1Mask|ShiftMask,   XK_Page_Down,   zoom,           {.f = -1} },
 	{ Mod1Mask|ShiftMask,   XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
